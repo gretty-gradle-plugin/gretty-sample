@@ -3,12 +3,13 @@ apply plugin: 'java'
 buildscript {
     repositories {
         maven {
-            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/'
+            url "file:/Users/brettrandall/src/gretty-gradle-plugin/gretty/build/privateRepo"
         }
         jcenter()
+        mavenLocal()
     }
     dependencies {
-        classpath 'org.gretty:gretty:3.0.1'
+        classpath 'org.gretty:gretty:3.0.2-SNAPSHOT'
     }
 }
 
@@ -30,7 +31,7 @@ subprojects {
 
 repositories {
     maven {
-        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/'
+        url "file:/Users/brettrandall/src/gretty-gradle-plugin/gretty/build/privateRepo"
     }
     jcenter()
 }
@@ -46,7 +47,7 @@ farm {
 
 repositories {
     maven {
-        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/'
+        url "file:/Users/brettrandall/src/gretty-gradle-plugin/gretty/build/privateRepo"
     }
     jcenter()
 }
